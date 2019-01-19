@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:property-placeholder location="classpath:jdbc.properties" file-encoding="UTF-8"/>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${driverClassName}"/>
+		<property name="url" value="${sqlurl}"/>
+		<property name="username" value="${user}"/>
+		<property name="password" value="${password}"/>
+	</bean>
+	
+	<!-- Template of DAO implement beans -->
+	<bean id="DAOImplTemplate" abstract="true">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!--  DAO implement beans -->
+	<bean id="studentDAOImpl" class="top.godder.homework.impl.StudentDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="teacherDAOImpl" class="top.godder.homework.impl.TeacherDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="noticeDAOImpl" class="top.godder.homework.impl.NoticeDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="gradeDAOImpl" class="top.godder.homework.impl.GradeDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="teachCourseDAOImpl" class="top.godder.homework.impl.TeachCourseDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="messageDAOImpl" class="top.godder.homework.impl.MessageDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="courseDAOImpl" class="top.godder.homework.impl.CourseDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="homeworkDAOImpl" class="top.godder.homework.impl.HomeworkDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="discussionDAOImpl" class="top.godder.homework.impl.DiscussionDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="assignHomeworkDAOImpl" class="top.godder.homework.impl.AssignHomeworkDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="attendCourseDAOImpl" class="top.godder.homework.impl.AttendCourseDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="logDAOImpl" class="top.godder.homework.impl.LogDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="administratorDAOImpl" class="top.godder.homework.impl.AdministratorDAOImpl" parent="DAOImplTemplate"></bean>
+	<bean id="sensitiveWordDAOImpl" class="top.godder.homework.impl.SensitiveWordDAOImpl" parent="DAOImplTemplate"></bean>
+	
+	<!--  Sensitive words filter bean -->
+	<bean id="sensitiveWordFilter" class="top.godder.homework.utils.SensitiveWordFilter">
+		<constructor-arg ref="dataSource"></constructor-arg>
+	</bean>
+	    
+</beans>

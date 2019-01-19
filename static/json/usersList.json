@@ -1,0 +1,22 @@
+[{
+    "usersId" : "1",
+    "userName" : "数据科学导论",
+    "userEmail" : "2018019998",
+    "userSex" : "必修",
+    "userStatus" : "学生",
+    "userGrade" : "陈老师"
+},{
+    "usersId" : "2",
+    "userName" : "测试课程",
+    "userEmail" : "2018019999 ",
+    "userSex" : "选修",
+    "userStatus" : "老师",
+    "userGrade" : "狗蛋管理员"
+},{
+    "usersId" : "3",
+    "userName" : "高级语言程序设计(C语言)",
+    "userEmail" : "2018039997 ",
+    "userSex" : "必修",
+    "userStatus" : "学生",
+    "userGrade" : "周老师"
+}]

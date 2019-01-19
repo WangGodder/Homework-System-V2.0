@@ -1,0 +1,46 @@
+[{
+    "msgId" : "1111",
+    "userface" : "../../images/userface1.jpg",
+    "userName" : "小王",
+    "userAsk" : "哈哈哈",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : [{
+        "userface" : "../../images/face.jpg",
+        "userName" : "用户姓名",
+        "userAsk" : "哈哈哈",
+        "askTime" : "2017-05-27 13:50"
+    }]
+},{
+    "msgId" : "2222",
+    "userface" : "../../images/userface2.jpg",
+    "userName" : "小李",
+    "userAsk" : "呵呵呵",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+},{
+    "msgId" : "3333",
+    "userface" : "../../images/userface3.jpg",
+    "userName" : "小赵",
+    "userAsk" : "恩恩恩",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+},{
+    "msgId" : "4444",
+    "userface" : "../../images/userface4.jpg",
+    "userName" : "小高",
+    "userAsk" : "喂喂喂喂",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : [{
+        "userface" : "../../images/face.jpg",
+        "userName" : "用户姓名",
+        "userAsk" : "啊啊啊啊",
+        "askTime" : "2017-05-27 13:50"
+    }]
+},{
+    "msgId" : "5555",
+    "userface" : "../../images/userface5.jpg",
+    "userName" : "小楚",
+    "userAsk" : "啦啦啦啦",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+}]
